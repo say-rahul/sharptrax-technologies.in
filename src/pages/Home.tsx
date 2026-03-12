@@ -434,62 +434,52 @@ export default function App() {
       </section>
 
       <section
-        className="relative h-screen w-full flex flex-col justify-center px-16"
+        className="relative h-screen w-full text-white"
         style={{
           backgroundImage: "url('/3nd-bg.svg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-        {/* CONTENT */}
-        <div className="relative z-10 max-w-6xl text-white  ml-30 mb-20">
-          {/* SMALL LABEL */}
-          <p className="text-[70%] tracking-[3px] uppercase text-gray-200 inline-block px-3 py-1 mb-4 hero-font">
-            Built on Precision, Engineering & Trust
-          </p>
-
+        <div className="relative h-full max-w-7xl mx-auto px-16">
           {/* TITLE */}
-          <h1 className="text-6xl font-bold leading-[0.9] hero-font -mt-3 ml-2">
-            Sharptrax <br />
-            Technologies
-          </h1>
-        </div>
+          <div className="absolute top-32 left-0">
+            <p className="text-xs tracking-[3px] uppercase text-gray-300 hero-font mb-4">
+              Built on Precision, Engineering & Trust
+            </p>
 
-        {/* FEATURE BOXES */}
-        <div className="relative z-10 mt-30 grid grid-cols-2 md:grid-cols-5 gap-6 max-w-6xl mx-auto justify-between">
-          <div className="glass-box h-60 w-[60.25]">
-            <div className="mb-3">
-              <img src="/Comp3/comp3-1.svg" className="w-13 h-13" />
-            </div>
-            <p className="mt-14 text-xl">Advanced automation systems</p>
+            <h1 className="text-6xl font-bold leading-[0.95] hero-font">
+              Sharptrax <br />
+              Technologies
+            </h1>
           </div>
 
-          <div className="glass-box h-60 w-[60.25]">
-            <div className="mb-3">
-              <img src="/Comp3/comp3-2.svg" className="w-13 h-13" />
+          {/* FEATURE BOXES */}
+          <div className="absolute bottom-20 left-0 w-full grid grid-cols-5 gap-6">
+            <div className="glass-box h-56 w-full flex flex-col justify-between">
+              <img src="/Comp3/comp3-1.svg" className="w-12 h-12" />
+              <p className="text-xl">Advanced automation systems</p>
             </div>
-            <p className="mt-14 text-xl">High-precision welding solutions</p>
-          </div>
 
-          <div className="glass-box h-60 w-[60.25]">
-            <div className="mb-3">
-              <img src="/Comp3/comp3-3.svg" className="w-13 h-13" />
+            <div className="glass-box h-56 w-full flex flex-col justify-between">
+              <img src="/Comp3/comp3-2.svg" className="w-12 h-12" />
+              <p className="text-xl">High-precision welding solutions</p>
             </div>
-            <p className="mt-14 text-xl">Proven industrial performance</p>
-          </div>
 
-          <div className="glass-box h-60 w-[60.25]">
-            <div className="mb-3">
-              <img src="/Comp3/comp3-4.svg" className="w-13 h-13" />
+            <div className="glass-box h-56 w-full flex flex-col justify-between">
+              <img src="/Comp3/comp3-3.svg" className="w-12 h-12" />
+              <p className="text-xl">Proven industrial performance</p>
             </div>
-            <p className="mt-14 text-xl">Reliable project delivery</p>
-          </div>
 
-          <div className="glass-box h-60 w-[60.25]">
-            <div className="mb-3">
-              <img src="/Comp3/comp3-5.svg" className="w-13 h-13" />
+            <div className="glass-box h-56 w-full flex flex-col justify-between">
+              <img src="/Comp3/comp3-4.svg" className="w-12 h-12" />
+              <p className="text-xl">Reliable project delivery</p>
             </div>
-            <p className="mt-14 text-xl">Customer-focused engineering</p>
+
+            <div className="glass-box h-56 w-full flex flex-col justify-between">
+              <img src="/Comp3/comp3-5.svg" className="w-12 h-12" />
+              <p className="text-xl">Customer-focused engineering</p>
+            </div>
           </div>
         </div>
       </section>
