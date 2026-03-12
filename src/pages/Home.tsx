@@ -169,41 +169,6 @@ export default function App() {
   return (
     <div className="w-full min-h-screen hero-font">
       {/* NAVBAR */}
-      <div className="fixed top-0 w-full h-20 z-50 bg-white backdrop-blur-md shadow">
-        <div className="max-w-7xl mx-auto flex items-center justify-between px-8 py-3">
-          {/* LOGO */}
-          <div className="flex items-center -mt-2 -ml-10">
-            <img
-              src="/logo.svg"
-              alt="Sharptrax Technologies"
-              className="h-16 w-auto"
-            />
-          </div>
-
-          {/* MENU */}
-          <div className="hidden md:flex gap-6 text-gray-700 items-center">
-            <a href="#">Home</a>
-            <p>/</p>
-            <a href="#">About Us</a>
-            <p>/</p>
-            <a href="#">Services</a>
-            <p>/</p>
-            <a href="#">Projects</a>
-            <p>/</p>
-            <a href="#">Gallery</a>
-            <p>/</p>
-            <a href="#">Contact Us</a>
-          </div>
-
-          {/* BUTTON */}
-          <button
-            onClick={() => setOpenForm(true)}
-            className="bg-black text-white px-5 py-2 -mr-25 mt-1"
-          >
-            Enquire Now
-          </button>
-        </div>
-      </div>
 
       {/* HERO SECTION */}
       <section className="relative h-screen overflow-hidden">
@@ -229,28 +194,28 @@ export default function App() {
             initial={{ x: -200, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="max-w-7xl px-16 text-white"
+            className="max-w-7xl px-6 md:px-16 text-white"
           >
-            <h1 className="text-8xl font-bold leading-[0.9] hero-font">
+            <h1 className="text-5xl md:text-8xl font-bold leading-[1.1] md:leading-[0.9] hero-font">
               BEYOND JUST <br />
-              <span className="ml-1">WELDING</span>
+              <span className="md:ml-1">WELDING</span>
             </h1>
 
-            <p className="ml-4 text-sm tracking-widest text-gray-200 hero-font">
+            <p className="mt-4 md:ml-4 text-xs md:text-sm tracking-widest text-gray-200 hero-font uppercase">
               YOUR ONE-STOP PARTNER FOR WELDING & CUTTING
-              <br />
+              <br className="hidden md:block" />
               AUTOMATION SOLUTIONS
             </p>
 
-            <div className="flex gap-4 mt-8 ml-10">
+            <div className="flex flex-col sm:flex-row gap-4 mt-8 md:ml-10">
               <button
                 onClick={() => setOpenForm(true)}
-                className="bg-white text-black px-6 py-3 shadow-2xl rounded-lg"
+                className="bg-white text-black px-6 py-3 shadow-2xl rounded-lg font-semibold"
               >
                 Enquire Now
               </button>
 
-              <button className="bg-black text-white shadow-2xl px-6 py-3 rounded-lg">
+              <button className="bg-black text-white shadow-2xl px-6 py-3 rounded-lg border border-white/10">
                 Explore Solutions
               </button>
             </div>
@@ -353,10 +318,10 @@ export default function App() {
         </div>
       )}
       {/* Engineering section */}
-      <section className="relative w-full py-32 bg-gray-100 overflow-hidden">
+      <section className="relative w-full py-20 md:py-32 bg-gray-100 overflow-hidden">
         {/* BACKGROUND GRID */}
         <div
-          className="absolute inset-0 opacity-60 -mt-30"
+          className="absolute inset-0 opacity-60 md:-mt-30"
           style={{
             height: "100%",
             width: "100%",
@@ -366,24 +331,25 @@ export default function App() {
           }}
         ></div>
 
-        <div className="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 px-10 items-center">
+        <div className="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 px-6 md:px-10 items-center">
           {/* LEFT SIDE IMAGE */}
           <div className="relative">
             <img
               src="/2nd-img1.svg"
-              className="rounded-3xl  w-full object-cover -mt-60"
+              className="rounded-3xl w-full object-cover md:-mt-60"
+              alt="Engineering Excellence"
             />
           </div>
 
           {/* RIGHT CONTENT */}
-          <div>
-            <h2 className="text-5xl font-bold text-gray-900 leading-[1.1]">
+          <div className="z-10">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-[1.1]">
               Engineering <br />
               Excellence Since <br />
               2005
             </h2>
 
-            <p className="mt-6 text-gray-600 max-w-xl">
+            <p className="mt-6 text-gray-600 max-w-xl text-sm md:text-base">
               Since its establishment in 2005, Sharptrax Technologies has
               focused strongly on engineering excellence, automation quality,
               reliability, and long-term customer partnerships. Our core
@@ -392,39 +358,44 @@ export default function App() {
             </p>
 
             {/* STATS */}
-            <div className="flex gap-16 mt-10">
+            <div className="flex flex-row gap-8 md:gap-16 mt-10">
               <div>
-                <h3 className="text-7xl font-bold text-red-500">20+</h3>
-                <p className="text-gray-600 text-sm mt-1 ml-1">
+                <h3 className="text-5xl md:text-7xl font-bold text-red-500">
+                  20+
+                </h3>
+                <p className="text-gray-600 text-xs md:text-sm mt-1">
                   Years of Experience
                 </p>
               </div>
 
               <div>
-                <h3 className="text-7xl font-bold text-red-500">5+</h3>
-                <p className="text-gray-600 text-sm mt-1 ml-1">
+                <h3 className="text-5xl md:text-7xl font-bold text-red-500">
+                  5+
+                </h3>
+                <p className="text-gray-600 text-xs md:text-sm mt-1">
                   Global automation partners
                 </p>
               </div>
             </div>
 
             {/* SMALL IMAGE */}
-            <div className="mt-5">
+            <div className="mt-8 md:mt-5">
               <img
                 src="/2nd-img2.svg"
-                className="rounded-2xl shadow-lg w-100 ml-12 "
+                className="rounded-2xl shadow-lg w-full max-w-sm md:ml-12"
+                alt="Facility detail"
               />
             </div>
           </div>
         </div>
 
         {/* BOTTOM TEXT */}
-        <div className="relative max-w-7xl mx-auto px-10 -mt-55">
-          <h3 className="text-2xl font-bold text-gray-800">
+        <div className="relative max-w-7xl mx-auto px-6 md:px-10 md:-mt-55 mt-16">
+          <h3 className="text-xl md:text-2xl font-bold text-gray-800">
             The Sharptrax Technologies Facility
           </h3>
 
-          <p className="text-gray-600 max-w-6/12 mt-3">
+          <p className="text-gray-600 w-full md:max-w-[50%] mt-3 text-sm md:text-base">
             We specialize in the design and manufacturing of advanced welding
             automation systems, robotic welding solutions, and special purpose
             machines. Our systems are engineered for precision, durability, and
@@ -434,51 +405,78 @@ export default function App() {
       </section>
 
       <section
-        className="relative h-screen w-full text-white"
+        className="relative min-h-screen lg:h-screen w-full text-white py-20 lg:py-0"
         style={{
           backgroundImage: "url('/3nd-bg.svg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-        <div className="relative h-full max-w-7xl mx-auto px-16">
+        <div className="relative h-full max-w-7xl mx-auto px-6 md:px-10 lg:px-16">
           {/* TITLE */}
-          <div className="absolute top-32 left-0">
-            <p className="text-xs tracking-[3px] uppercase text-gray-300 hero-font mb-4">
+          <div className="lg:absolute lg:top-32 lg:left-16 mb-12 lg:mb-0">
+            <p className="text-[10px] md:text-xs tracking-[3px] uppercase text-gray-300 hero-font mb-4">
               Built on Precision, Engineering & Trust
             </p>
 
-            <h1 className="text-6xl font-bold leading-[0.95] hero-font">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[0.95] hero-font">
               Sharptrax <br />
               Technologies
             </h1>
           </div>
 
           {/* FEATURE BOXES */}
-          <div className="absolute bottom-20 left-0 w-full grid grid-cols-5 gap-6">
-            <div className="glass-box h-56 w-full flex flex-col justify-between">
-              <img src="/Comp3/comp3-1.svg" className="w-12 h-12" />
-              <p className="text-xl">Advanced automation systems</p>
-            </div>
+          <div className="lg:absolute lg:bottom-20 lg:left-0 w-full px-0 lg:px-16">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6">
+              <div className="glass-box h-48 md:h-56 w-full flex flex-col justify-between p-6 bg-white/10 backdrop-blur-md border border-white/10 rounded-lg">
+                <img
+                  src="/Comp3/comp3-1.svg"
+                  className="w-10 h-10 md:w-12 md:h-12"
+                />
+                <p className="text-lg md:text-xl leading-tight">
+                  Advanced automation systems
+                </p>
+              </div>
 
-            <div className="glass-box h-56 w-full flex flex-col justify-between">
-              <img src="/Comp3/comp3-2.svg" className="w-12 h-12" />
-              <p className="text-xl">High-precision welding solutions</p>
-            </div>
+              <div className="glass-box h-48 md:h-56 w-full flex flex-col justify-between p-6 bg-white/10 backdrop-blur-md border border-white/10 rounded-lg">
+                <img
+                  src="/Comp3/comp3-2.svg"
+                  className="w-10 h-10 md:w-12 md:h-12"
+                />
+                <p className="text-lg md:text-xl leading-tight">
+                  High-precision welding solutions
+                </p>
+              </div>
 
-            <div className="glass-box h-56 w-full flex flex-col justify-between">
-              <img src="/Comp3/comp3-3.svg" className="w-12 h-12" />
-              <p className="text-xl">Proven industrial performance</p>
-            </div>
+              <div className="glass-box h-48 md:h-56 w-full flex flex-col justify-between p-6 bg-white/10 backdrop-blur-md border border-white/10 rounded-lg">
+                <img
+                  src="/Comp3/comp3-3.svg"
+                  className="w-10 h-10 md:w-12 md:h-12"
+                />
+                <p className="text-lg md:text-xl leading-tight">
+                  Proven industrial performance
+                </p>
+              </div>
 
-            <div className="glass-box h-56 w-full flex flex-col justify-between">
-              <img src="/Comp3/comp3-4.svg" className="w-12 h-12" />
-              <p className="text-xl">Reliable project delivery</p>
-            </div>
+              <div className="glass-box h-48 md:h-56 w-full flex flex-col justify-between p-6 bg-white/10 backdrop-blur-md border border-white/10 rounded-lg">
+                <img
+                  src="/Comp3/comp3-4.svg"
+                  className="w-10 h-10 md:w-12 md:h-12"
+                />
+                <p className="text-lg md:text-xl leading-tight">
+                  Reliable project delivery
+                </p>
+              </div>
 
-            <div className="glass-box h-56 w-full flex flex-col justify-between">
-              <img src="/Comp3/comp3-5.svg" className="w-12 h-12" />
-              <p className="text-xl">Customer-focused engineering</p>
+              <div className="glass-box h-48 md:h-56 w-full flex flex-col justify-between p-6 bg-white/10 backdrop-blur-md border border-white/10 rounded-lg">
+                <img
+                  src="/Comp3/comp3-5.svg"
+                  className="w-10 h-10 md:w-12 md:h-12"
+                />
+                <p className="text-lg md:text-xl leading-tight">
+                  Customer-focused engineering
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -540,19 +538,19 @@ export default function App() {
         </div>
       </section>
       {/* 6TH PAGE */}
-      <section className="py-20 bg-gray-100 overflow-hidden">
-        <h2 className="text-center text-4xl mb-16 tracking-widest">
+      <section className="py-12 md:py-20 bg-gray-100 overflow-hidden">
+        <h2 className="text-center text-2xl md:text-4xl mb-10 md:mb-16 tracking-widest px-4">
           OUR VALUABLE CLIENTS
         </h2>
 
         {/* ROW 1 */}
-        <div className="overflow-hidden mb-14">
-          <div className="flex gap-20 scroll-right w-max">
+        <div className="overflow-hidden mb-8 md:mb-14">
+          <div className="flex gap-10 md:gap-20 scroll-right w-max">
             {[...row1, ...row1].map((logo, i) => (
               <img
                 key={i}
                 src={logo}
-                className="h-10 opacity-70 hover:opacity-100 transition"
+                className="h-6 md:h-10 opacity-70 hover:opacity-100 transition object-contain"
                 alt="client logo"
               />
             ))}
@@ -561,12 +559,12 @@ export default function App() {
 
         {/* ROW 2 */}
         <div className="overflow-hidden">
-          <div className="flex gap-20 scroll-left w-max">
+          <div className="flex gap-10 md:gap-20 scroll-left w-max">
             {[...row2, ...row2].map((logo, i) => (
               <img
                 key={i}
                 src={logo}
-                className="h-10 opacity-70 hover:opacity-100 transition"
+                className="h-6 md:h-10 opacity-70 hover:opacity-100 transition object-contain"
                 alt="client logo"
               />
             ))}
@@ -575,7 +573,7 @@ export default function App() {
       </section>
       {/* 7th page */}
       <section
-        className="relative h-screen bg-cover bg-center flex items-center"
+        className="relative min-h-screen bg-cover bg-center flex items-center py-20 lg:py-0"
         style={{
           backgroundImage: "url('/3nd-bg.svg')",
         }}
@@ -583,20 +581,20 @@ export default function App() {
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-black/40"></div>
 
-        <div className="relative z-10 max-w-7xl mx-auto w-full px-10 flex justify-between items-center">
+        <div className="relative z-10 max-w-7xl mx-auto w-full px-6 md:px-10 flex flex-col lg:flex-row justify-between items-center gap-12">
           {/* LEFT TEXT */}
-          <div className="text-white max-w-xl -mt-75">
-            <p className="text-xs tracking-widest mb-2 inline-block px-2 py-1">
+          <div className="text-white max-w-xl lg:-mt-75 text-center lg:text-left">
+            <p className="text-xs tracking-widest mb-2 inline-block border border-white/20 px-2 py-1 rounded">
               REQUEST A QUOTE
             </p>
 
-            <h1 className="text-5xl font-bold leading-[1.1] mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold leading-[1.1] mb-6">
               Ready to Start Your
               <br />
               Automation Project?
             </h1>
 
-            <p className="text-gray-200 text-sm leading-relaxed mr-3">
+            <p className="text-gray-200 text-sm leading-relaxed lg:mr-3">
               For more information about our automation solutions or to request
               a quote, connect with the Sharptrax Technologies team today.
             </p>
@@ -605,20 +603,20 @@ export default function App() {
           {/* FORM */}
           <form
             onSubmit={handleQuoteSubmit}
-            className="backdrop-blur-md bg-white/10 border border-white/20 rounded-2xl p-8 w-105 text-white"
+            className="backdrop-blur-md bg-white/10 border border-white/20 rounded-2xl p-6 md:p-8 w-full lg:w-105 text-white"
           >
             <h2 className="text-2xl font-semibold mb-6">Request a Quote</h2>
 
             {/* NAME + EMAIL */}
-            <div className="flex gap-3 mb-4">
-              <div className="flex flex-col w-1/2">
+            <div className="flex flex-col md:flex-row gap-3 mb-4">
+              <div className="flex flex-col w-full md:w-1/2">
                 <input
                   name="customerName"
                   value={quoteFormData.customerName}
                   onChange={handleQuoteInputChange}
                   type="text"
                   placeholder="Your Name *"
-                  className="bg-white/10 border border-white/30 rounded-lg px-4 py-2 placeholder-gray-300 outline-none"
+                  className="bg-white/10 border border-white/30 rounded-lg px-4 py-2 placeholder-gray-300 outline-none focus:border-white/60 transition"
                 />
                 {validationErrors.customerName && (
                   <span className="text-red-400 text-xs mt-1">
@@ -627,14 +625,14 @@ export default function App() {
                 )}
               </div>
 
-              <div className="flex flex-col w-1/2">
+              <div className="flex flex-col w-full md:w-1/2">
                 <input
                   name="customerEmail"
                   value={quoteFormData.customerEmail}
                   onChange={handleQuoteInputChange}
                   type="email"
                   placeholder="Your Email *"
-                  className="bg-white/10 border border-white/30 rounded-lg px-4 py-2 placeholder-gray-300 outline-none"
+                  className="bg-white/10 border border-white/30 rounded-lg px-4 py-2 placeholder-gray-300 outline-none focus:border-white/60 transition"
                 />
                 {validationErrors.customerEmail && (
                   <span className="text-red-400 text-xs mt-1">
@@ -652,7 +650,7 @@ export default function App() {
                 onChange={handleQuoteInputChange}
                 type="text"
                 placeholder="City *"
-                className="bg-white/10 border border-white/30 rounded-lg px-4 py-2 placeholder-gray-300 outline-none"
+                className="bg-white/10 border border-white/30 rounded-lg px-4 py-2 placeholder-gray-300 outline-none focus:border-white/60 transition"
               />
               {validationErrors.customerCity && (
                 <span className="text-red-400 text-xs mt-1">
@@ -669,7 +667,7 @@ export default function App() {
                 onChange={handleQuoteInputChange}
                 type="text"
                 placeholder="Phone number *"
-                className="bg-white/10 border border-white/30 rounded-lg px-4 py-2 placeholder-gray-300 outline-none"
+                className="bg-white/10 border border-white/30 rounded-lg px-4 py-2 placeholder-gray-300 outline-none focus:border-white/60 transition"
               />
               {validationErrors.customerPhone && (
                 <span className="text-red-400 text-xs mt-1">
@@ -686,7 +684,7 @@ export default function App() {
                 onChange={handleQuoteInputChange}
                 placeholder="Message *"
                 rows={3}
-                className="bg-white/10 border border-white/30 rounded-lg px-4 py-2 placeholder-gray-300 outline-none"
+                className="bg-white/10 border border-white/30 rounded-lg px-4 py-2 placeholder-gray-300 outline-none focus:border-white/60 transition resize-none"
               />
               {validationErrors.projectMessage && (
                 <span className="text-red-400 text-xs mt-1">
@@ -698,12 +696,12 @@ export default function App() {
             {/* BUTTON */}
             <button
               type="submit"
-              className="w-full bg-white text-black py-3 rounded-lg font-medium hover:bg-gray-200 transition"
+              className="w-full bg-white text-black py-3 rounded-lg font-medium hover:bg-gray-200 transition active:scale-[0.98]"
             >
               Send
             </button>
 
-            <p className="text-xs text-gray-300 mt-4 leading-relaxed">
+            <p className="text-[10px] text-gray-300 mt-4 text-center lg:text-left leading-relaxed">
               At Sharptrax Technologies, your privacy is important to us. All
               shared information is kept confidential and secure.
             </p>
@@ -796,180 +794,6 @@ export default function App() {
           </div>
         </div>
       </section>
-      {/* FOOTER */}
-      <footer
-        className="relative pt-16 pb-10 overflow-hidden"
-        style={{
-          background: "linear-gradient(45deg,#eeeeee 50%,#dddddd 50%)",
-        }}
-      >
-        <div className="max-w-6xl mx-auto px-10">
-          {/* TOP ROW */}
-          <div className="flex justify-between items-center mb-10">
-            <img src="/logo.svg" className="h-20 -mb-5" />
-
-            <a
-              href="/contact"
-              className="border border-gray-400 bg-white px-6 py-2 rounded-full shadow-sm hover:bg-gray-200"
-            >
-              Contact Us
-            </a>
-          </div>
-
-          <div className="border-t border-gray-300 mb-10"></div>
-
-          {/* GRID */}
-          <div className="grid grid-cols-4 gap-12 text-sm text-gray-700">
-            {/* SERVICES */}
-            <div>
-              <h3 className="font-semibold mb-3">
-                <a href="/services" className="hover:underline">
-                  Our Services
-                </a>
-              </h3>
-
-              <ul className="space-y-2 text-gray-600">
-                <li>
-                  <a href="/services/robotic-welding">Robotic Welding</a>
-                </li>
-                <li>
-                  <a href="/services/pta-welding">PTA Welding Systems</a>
-                </li>
-                <li>
-                  <a href="/services/rotators">Welding Rotators</a>
-                </li>
-                <li>
-                  <a href="/services/positioners">Welding Positioners</a>
-                </li>
-                <li>
-                  <a href="/services/cnc">CNC Cutting Machines</a>
-                </li>
-                <li>
-                  <a href="/services/spm">Special Purpose Machines</a>
-                </li>
-              </ul>
-            </div>
-
-            {/* INDUSTRIES */}
-            <div>
-              <h3 className="font-semibold mb-3">
-                <a href="/industries" className="hover:underline">
-                  Industries We Serve
-                </a>
-              </h3>
-
-              <ul className="space-y-2 text-gray-600">
-                <li>
-                  <a href="/industries/heavy-engineering">Heavy Engineering</a>
-                </li>
-                <li>
-                  <a href="/industries/manufacturing">Manufacturing</a>
-                </li>
-                <li>
-                  <a href="/industries/power-energy">Power & Energy</a>
-                </li>
-                <li>
-                  <a href="/industries/automotive">Automotive</a>
-                </li>
-                <li>
-                  <a href="/industries/infrastructure">Infrastructure</a>
-                </li>
-                <li>
-                  <a href="/industries/machinery">Special Machinery</a>
-                </li>
-              </ul>
-            </div>
-
-            {/* ADDRESS */}
-            <div>
-              <h3 className="font-semibold mb-3">
-                <a href="/location" className="hover:underline">
-                  Address
-                </a>
-              </h3>
-
-              <a
-                href="/location"
-                className="text-gray-600 leading-relaxed hover:underline"
-              >
-                166, 11th Main Road, SIDCO Industrial Estate, Thirumudivakkam,
-                Chennai – 600040
-              </a>
-
-              <p className="mt-2">
-                <a href="tel:+919944432149" className="hover:underline">
-                  📞 +91 99444 32149
-                </a>
-              </p>
-
-              <p>
-                <a
-                  href="mailto:sharptrax@yahoo.com"
-                  className="hover:underline"
-                >
-                  ✉ sharptrax@yahoo.com
-                </a>
-              </p>
-
-              <p className="text-gray-600">GSTIN: 33AJWPG6450H1ZZ</p>
-            </div>
-
-            {/* SOCIAL */}
-            <div>
-              <h3 className="font-semibold mb-3">Follow us</h3>
-
-              <div className="flex gap-3">
-                <a
-                  href="https://facebook.com"
-                  target="_blank"
-                  className="w-9 h-9 rounded-full border flex items-center justify-center hover:bg-gray-200"
-                >
-                  f
-                </a>
-
-                <a
-                  href="https://twitter.com"
-                  target="_blank"
-                  className="w-9 h-9 rounded-full border flex items-center justify-center hover:bg-gray-200"
-                >
-                  x
-                </a>
-
-                <a
-                  href="https://linkedin.com"
-                  target="_blank"
-                  className="w-9 h-9 rounded-full border flex items-center justify-center hover:bg-gray-200"
-                >
-                  in
-                </a>
-
-                <a
-                  href="https://instagram.com"
-                  target="_blank"
-                  className="w-9 h-9 rounded-full border flex items-center justify-center hover:bg-gray-200"
-                >
-                  ig
-                </a>
-              </div>
-            </div>
-          </div>
-
-          {/* BOTTOM */}
-          <div className="flex justify-between items-center mt-16 text-xs text-gray-600">
-            <p>© Copyright Sharptrax Technologies. All Rights Reserved</p>
-
-            <div className="flex gap-6">
-              <a href="/privacy">Privacy Policy</a>
-              <a href="/terms">Terms of Use</a>
-              <a href="/refunds">Sales and Refunds</a>
-              <a href="/legal">Legal</a>
-              <a href="/location" className="hover:underline">
-                Address
-              </a>
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
