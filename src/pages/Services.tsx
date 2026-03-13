@@ -161,6 +161,46 @@ const categories = [
           "/servicemachines/welding automation/11/mac11.4.jpg",
         ],
       },
+      {
+        name: "Robotic Gantry Automation",
+        desc: "Robotic Gantry Automation is a cornerstone of Sharptrax Technologies’ heavy-duty manufacturing solutions. By utilizing overhead gantry systems integrated with high-performance robotics, we provide expansive work envelopes and superior flexibility for large-scale welding and assembly tasks. With over 20 years of expertise, Sharptrax delivers gantry systems that optimize floor space while maintaining the highest levels of precision and structural integrity.",
+        features: [
+          "Overhead configurations maximize floor space and allow for the handling of large, heavy workpieces that traditional floor-mounted robots cannot reach.",
+          "Multi-axis gantry movement combined with robotic precision ensures consistent, high-quality welds across long spans and complex geometries.",
+        ],
+        imgs: [
+          "/servicemachines/welding automation/12/mac12.1.jpg",
+          "/servicemachines/welding automation/12/mac12.2.jpg",
+          "/servicemachines/welding automation/12/mac12.3.jpg",
+          "/servicemachines/welding automation/12/mac12.4.jpg",
+        ],
+      },
+      {
+        name: "Robotic Trolley Welding",
+        desc: "Sharptrax Technologies’ Robotic Trolley Welding systems provide an agile solution for manufacturing environments requiring mobility and flexibility. By mounting robotic arms on synchronized automated trolleys, we enable the system to traverse linear tracks, effectively extending the robot's reach across multiple workstations. Backed by 20 years of innovation, our trolley-mounted robots are designed for high-speed, high-accuracy welding of long structures and repetitive assemblies.",
+        features: [
+          "Linear track integration allows for a single robotic unit to service multiple welding fixtures, significantly increasing asset utilization.",
+          "High-precision servo-driven trolleys ensure seamless synchronization between movement and welding for consistent bead quality.",
+        ],
+        imgs: [
+          "/servicemachines/welding automation/13/mac13.1.jpg",
+          "/servicemachines/welding automation/13/mac13.2.jpg",
+        ],
+      },
+      {
+        name: "Material Tilter",
+        desc: "Sharptrax Technologies’ Material Tilters are engineered for high-stability tilting of heavy job components across diverse industrial applications. Built with a solid construction for optimal weight balancing, these systems ensure controlled and safe rotation of workpieces. Whether for assembly, inspection, or positioning, our tilters provide a robust solution for handling loads from 1T up to 50 tonnes, ensuring maximum operational safety and efficiency.",
+        features: [
+          "Available in both motorized and hydraulic-based configurations to suit specific torque and load requirements.",
+          "Advanced PLC and servo-controlled options are available for applications requiring high precision and automated positioning.",
+        ],
+        imgs: [
+          "/servicemachines/welding automation/14/mac14.1.jpg",
+          "/servicemachines/welding automation/14/mac14.2.jpg",
+          "/servicemachines/welding automation/14/mac14.3.jpg",
+          "/servicemachines/welding automation/14/mac14.4.jpg",
+        ],
+      },
     ],
   },
   {
