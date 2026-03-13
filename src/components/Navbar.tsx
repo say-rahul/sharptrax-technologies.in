@@ -34,7 +34,7 @@ export default function Navbar() {
             Projects
           </a>
           <p className="text-gray-300">/</p>
-          <a href="#" className="hover:text-black">
+          <a href="/gallery" className="hover:text-black">
             Gallery
           </a>
           <p className="text-gray-300">/</p>
