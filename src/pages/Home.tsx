@@ -607,7 +607,6 @@ export default function App() {
         className="relative min-h-screen bg-cover bg-center flex items-center py-20 lg:py-0"
         style={{ backgroundImage: "url('/3nd-bg.svg')" }}
       >
-        <div className="absolute inset-0 bg-black/40"></div>
         <div className="relative z-10 max-w-7xl mx-auto w-full px-6 md:px-10 flex flex-col lg:flex-row justify-between items-center gap-12">
           <div className="text-white max-w-xl lg:-mt-75 text-center lg:text-left">
             <p className="text-xs tracking-widest mb-2 inline-block border border-white/20 px-2 py-1 rounded">
