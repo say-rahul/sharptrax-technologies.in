@@ -161,15 +161,27 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold mb-3">Follow us</h3>
             <div className="flex gap-3">
-              {["f", "x", "in", "ig"].map((icon) => (
-                <a
-                  key={icon}
-                  href="#"
-                  className="w-9 h-9 rounded-full border flex items-center justify-center hover:bg-gray-200 transition-colors"
-                >
-                  {icon}
-                </a>
-              ))}
+              {/* Tell TS these are specific keys, not just any strings */}
+              {(["f", "yt", "in", "ig"] as const).map((icon) => {
+                const urls = {
+                  f: "https://www.facebook.com/sharptraxtechnologies",
+                  yt: "https://www.youtube.com/@sharptraxtechnologies9926",
+                  in: "https://www.linkedin.com/company/sharptrax-technologies",
+                  ig: "https://www.instagram.com/sharptrax/",
+                };
+
+                return (
+                  <a
+                    key={icon}
+                    href={urls[icon]} // Now TS knows icon is a valid key
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-9 h-9 rounded-full border flex items-center justify-center hover:bg-gray-200 transition-colors uppercase text-xs font-bold"
+                  >
+                    {icon}
+                  </a>
+                );
+              })}
             </div>
           </div>
         </div>
